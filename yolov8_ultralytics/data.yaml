@@ -1,0 +1,10 @@
+train: visible-watermark-detection-VOC2007.v4i.yolov8/train
+val: visible-watermark-detection-VOC2007.v4i.yolov8/valid
+nc: 4  # Number of classes
+names: [
+    "contact",  # contact information
+    "identifier",  # image identifier
+    "logo",  # a company logo
+    "notice",  # copyright or other type of notice
+]
+

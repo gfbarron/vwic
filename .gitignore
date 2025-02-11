@@ -1,3 +1,18 @@
+# Datasets
+datasets
+visible-watermark-detection-VOC2007
+
+
+# Logs
+yolov8_ultralytics/runs
+
+# Models
+*.pt
+
+# Images
+*.jpg
+*.png
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
