@@ -6,6 +6,7 @@ datasets
 # Logs
 yolov8_ultralytics/runs
 *model_selection*
+*training_logs*
 
 # Models
 *.pt
