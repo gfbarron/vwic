@@ -10,6 +10,7 @@ yolov8_ultralytics/runs
 
 # Models
 *.pt
+*model*
 
 # Images
 *.jpg
