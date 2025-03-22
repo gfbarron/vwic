@@ -88,3 +88,25 @@ def evaluate_coco_metrics(model, test_dataset, bounding_box_format):
     print("=================================")
     print(df)
 
+
+def visualize_detections(model, dataset, bounding_box_format, class_mapping):
+    """Used to plot detections from the YOLOv8 model."""
+    images, y_true = next(iter(dataset.take(1)))
+    y_pred = model.predict(images)
+
+    # Denormalize images to 0-255 since value_range parameter doesn't seem to work
+    images_denormalized = tf.cast(images * 255.0, dtype=tf.uint8)
+
+    keras_cv.visualization.plot_bounding_box_gallery(
+        images_denormalized,  # Use denormalized images
+        value_range=(0, 255),  # Set value_range to [0, 255]
+        bounding_box_format=bounding_box_format,
+        y_true=y_true,
+        y_pred=y_pred,
+        scale=4,
+        rows=2,
+        cols=2,
+        show=True,
+        font_scale=0.7,
+        class_mapping=class_mapping,
+    )
