@@ -1,10 +1,11 @@
 # Datasets
 datasets
-visible-watermark-detection-VOC2007
+*visible-watermark-detection-VOC2007*
 
 
 # Logs
 yolov8_ultralytics/runs
+*model_selection*
 
 # Models
 *.pt
@@ -29,7 +30,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
