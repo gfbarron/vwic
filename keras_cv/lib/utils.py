@@ -90,7 +90,15 @@ def evaluate_coco_metrics(model, test_dataset, bounding_box_format):
 
 
 def visualize_detections(model, dataset, bounding_box_format, class_mapping):
-    """Used to plot detections from the YOLOv8 model."""
+    """Used to plot detections from the YOLOv8 model.
+
+    Reference: https://keras.io/examples/vision/yolov8/
+    Args:
+        model (Model): detector from kerasCV
+        dataset (Dataset): Dataset
+        bounding_box_format (str): eg. xyxy
+        class_mapping (dict): string to number mapping for classes
+    """
     images, y_true = next(iter(dataset.take(1)))
     y_pred = model.predict(images)
 
